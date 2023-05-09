@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Proyecto3.Views.LoginPage"
+             Shell.NavBarIsVisible="False"
+             Visual="Material"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HorizontalOptions="Center" Margin="30">
+                <Frame BackgroundColor="#FF8E00" CornerRadius="20">
+                    <Label Text="Recibos Tracker" Padding="10" FontSize="30" HorizontalOptions="Center" FontAttributes="Bold" TextColor="White" Margin="0, 30, 0, 15" />
+                </Frame>
+                <Label Text="Bienvenido de Vuelta!" FontSize="20" FontAttributes="Bold" TextColor="#333" Margin="0, 20" HorizontalOptions="Center" />
+            </StackLayout>
+            <StackLayout Margin="30, 0">
+                <Frame CornerRadius="10" Padding="10, 0, 0, 0" BackgroundColor="#F7F7F7">
+                    <Entry Placeholder="Usuario"
+                           x:Name="Username"
+                           Keyboard="Text" 
+                           FontSize="16" 
+                           TextColor="#333" 
+                           PlaceholderColor="#333"
+                           TextChanged="Username_TextChanged"
+                           BackgroundColor="#F7F7F7"
+                           />
+                </Frame>
+
+                <Frame CornerRadius="10" Padding="10, 0, 0, 0" BackgroundColor="#F7F7F7">
+                    <Entry Placeholder="Password"
+                           x:Name="Password"
+                           IsPassword="True"
+                           FontSize="16"
+                           TextColor="#333" 
+                           PlaceholderColor="#333"
+                           BackgroundColor="#F7F7F7"
+                           />
+                </Frame>
+
+                <Button Text="Iniciar Sesion"
+                        TextColor="#FFF"
+                        x:Name="LoginBtn"
+                        BackgroundColor="#02D6DB"
+                        FontSize="18"
+                        CornerRadius="10"
+                        Margin="0, 20"
+                        HorizontalOptions="End"
+                        HeightRequest="50"
+                        Clicked="LoginBtn_Clicked" />
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center" Margin="0, 30">
+                    <Label Text="Aun no tienes cuenta?" TextColor="#333" />
+                    <Button Text="Registrar" x:Name="Registrar" BackgroundColor="#7DD900" Clicked="Registrar_Tapped" />
+                </StackLayout>
+            </StackLayout>
+            <Button Text="Salir de la aplicacion"
+                    x:Name="SalirBtn"
+                    Clicked="SalirBtn_Clicked"
+                    Margin="30, 0"
+                    Padding="20"
+                    BackgroundColor="#FF704B"
+                    CornerRadius="10"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
